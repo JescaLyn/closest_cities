@@ -1,8 +1,8 @@
-## Closest Cities
+# Closest Cities
 
 This is a simple program that is intended to calculate the two closest cities from a list. The method `closest_cities` can be used to find the closest two addresses from an array of any addresses. By default, the method is called on a hardcoded `CITIES` constant.
 
-# Instructions to Run
+## Instructions to Run
 
 1) Clone or download this directory.
 2) Run "bundle install" in the terminal at the top-level.
