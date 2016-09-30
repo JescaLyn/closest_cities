@@ -21,10 +21,10 @@ CITIES = [
   "Singapore"
 ]
 
-def closest_cities
+def closest_cities(cities = CITIES)
   locations = []
 
-  CITIES.each do |city|
+  cities.each do |city|
     # uses Geocoder gem to find latitude and longitude
     lat_lng = Geocoder.search(city).first.data["geometry"]["location"]
     locations.push( [ lat_lng["lat"], lat_lng["lng"] ] )
@@ -44,7 +44,8 @@ def closest_cities
       # Set the new minimum distance if this distance is less
       if !min_dist || dist < min_dist
         min_dist = dist
-        min_dist_cities = [CITIES[i], CITIES[j]]
+        # The i and j indices here align with the indices of the cities array
+        min_dist_cities = [cities[i], cities[j]]
       end
     end
   end
